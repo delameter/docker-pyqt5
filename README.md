@@ -2,9 +2,9 @@
 
 ### Dockerfile for Python 3 + PyQt5 applications with X11 support
 
-Based on [jozo/pyqt5:1.0](https://hub.docker.com/r/jozo/pyqt5).
+[DockerHub](https://hub.docker.com/repository/docker/delameter/pyqt5) | [GitHub](https://github.com/delameter/docker-pyqt5)
 
-Includes **pyqt5.qtmultimedia** and **pyqt5.qtx11extras**.
+Based on [jozo/pyqt5:1.0](https://hub.docker.com/r/jozo/pyqt5). Includes **pyqt5.qtmultimedia** and **pyqt5.qtx11extras**.
 
 Execute this to make sure everything works as supposed to:
 ```shell

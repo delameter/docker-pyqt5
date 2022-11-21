@@ -7,6 +7,7 @@ ARG GID=1000
 
 MAINTAINER delameter <0.delameter@gmail.com>
 LABEL org.opencontainers.image.source=https://github.com/delameter/docker-pyqt5
+LABEL org.opencontainers.image.authors="A. Shavykin"
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LIBGL_ALWAYS_INDIRECT=1
@@ -22,9 +23,18 @@ RUN adduser \
         "${USER}" || echo 'Skipping'
 
 RUN apt-get update &&\
-    apt-get -y install python3-pyqt5 \
+    apt-get -y install python3-pip \
+                       python3-pyqt5 \
                        python3-pyqt5.qtmultimedia \
-                       python3-pyqt5.qtx11extras &&\
+                       python3-pyqt5.qtx11extras && \
     rm -rf /var/cache/apt/archives
+RUN pip install --no-cache-dir --upgrade pip
 
 COPY test.py /tmp/test.py
+
+ARG VERSION=0
+ARG BUILD_DATE=0
+LABEL org.opencontainers.image.created=${BUILD_DATE}
+LABEL org.opencontainers.image.version=${VERSION}
+
+CMD python /tmp/test.py

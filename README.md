@@ -9,6 +9,7 @@ Based on [jozo/pyqt5:1.0](https://hub.docker.com/r/jozo/pyqt5). Includes:
   - pyqt5
   - pyqt5.qtmultimedia
   - pyqt5.qtx11extras
+  - [dumb-init](https://github.com/Yelp/dumb-init)
 
 Execute this to make sure everything works as supposed to:
 ```shell

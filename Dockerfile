@@ -37,8 +37,6 @@ RUN pip install --no-cache-dir --upgrade pip
 
 WORKDIR ${APP_ROOT}
 
-COPY test.py /tmp/test.py
-
 ARG VERSION=0
 ARG BUILD_DATE=0
 ENV BASE_IMAGE_BUILD_DATE=${BUILD_DATE}

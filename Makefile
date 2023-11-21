@@ -43,7 +43,7 @@ build: ## build docker image
 test: ## run test script inside a container
 	./test.sh
 
-release: ## tag image as latest and push
+publish: ## tag image as latest and push
 	docker push ${IMAGE}:${VERSION}
 	docker tag ${IMAGE}:${VERSION} ${IMAGE}:latest
 	docker push ${IMAGE}:latest

@@ -12,6 +12,9 @@ Based on [jozo/pyqt5:1.0](https://hub.docker.com/r/jozo/pyqt5). Includes:
   - [dumb-init](https://github.com/Yelp/dumb-init)
 
 Run this command from the sources directory to make sure everything works as supposed to:
+
+<img align="right" src="https://github.com/delameter/docker-pyqt5/assets/50381946/300ef213-e4e0-43fb-b1ce-609469fdcad5">
+
 ```shell
 docker run --rm \
     -e DISPLAY=$DISPLAY \
@@ -21,8 +24,6 @@ docker run --rm \
     delameter/pyqt5:latest \
     python3 /tmp/test.py
 ```
-
-<img align="right" src="https://github.com/delameter/docker-pyqt5/assets/50381946/300ef213-e4e0-43fb-b1ce-609469fdcad5">
 
 Or just execute `test.sh`, which contains the very same command.
 The result should look like on a screenshot to the right.
